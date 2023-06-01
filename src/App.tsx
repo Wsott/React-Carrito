@@ -35,7 +35,7 @@ import AddForm from './components/AddForm/AddForm';
 
 function App () {
   return (
-    <AddForm></AddForm>
+    <AddForm ></AddForm>
   );
 }
 
