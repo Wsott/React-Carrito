@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import AddForm from './components/AddForm/AddForm';
+import AddForm, { Producto } from './components/AddForm/AddForm';
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -34,8 +34,25 @@ import AddForm from './components/AddForm/AddForm';
 // }
 
 function App () {
+  // const items: Array<Item> = [];
+  const [itemList, setItemList] = useState<Producto[]>([])
+  
+  const addItemToTheList = (item: Producto) => {
+    setItemList([...itemList, item]);
+    // console.log(itemList);
+  };
+
+  // console.log(itemList);
+
   return (
-    <AddForm ></AddForm>
+    <>
+    <AddForm addItemToTheList={addItemToTheList} ></AddForm>
+    <ul>
+        {itemList.map((item, index) => (
+          <li key={index}>{item.name}</li>
+        ))}
+      </ul>
+    </>
   );
 }
 
