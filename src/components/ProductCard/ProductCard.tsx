@@ -27,7 +27,7 @@ function ProductCard (data: productInput) {
             <h4 className={estilo.price}>${data.product.price}</h4>
             <div className={estilo.row}>
                 <button>-</button>
-                <p>0</p>
+                <p className={estilo.price}>0</p>
                 <button>+</button>
             </div>
         </div>
