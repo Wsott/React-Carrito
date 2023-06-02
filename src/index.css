@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +66,51 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+:root {
+  --color-fondo: #2C3333;
+  --color-primario: #395B64;
+  --color-secundario: #A5C9CA;
+  --color-terciario: #E7F6F2;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  background-color: var(--color-fondo);
+}
+
+div {
+  background-color: var(--color-primario);
+}
+
+label {
+  font-size: 1.12em;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+input, textarea {
+  background-color: var(--color-secundario);
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+button {
+  background-color: var(--color-terciario);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1.12em;
+  font-weight: 500;
+  font-family: inherit;
 }

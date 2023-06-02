@@ -1,0 +1,26 @@
+@media screen and (max-width: 450px) {
+    .container {
+        width: 100%;
+
+        box-sizing: border-box;
+        /* grid-auto-flow: row; */
+        /* grid-template-columns: 1fr; */
+        /* grid-gap: 10px; */
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cell {
+        /* background-color: red; */
+        /* padding: 1vh 3vh; */
+        margin-bottom: 1vh;
+    }
+
+    input, textarea {
+        box-sizing: border-box;
+        width: 100%;
+    }
+}

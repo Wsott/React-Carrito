@@ -46,7 +46,7 @@ function App () {
 
   return (
     <>
-    <AddForm addItemToTheList={addItemToTheList} ></AddForm>
+    <AddForm updateFunction={addItemToTheList} ></AddForm>
     <ul>
         {itemList.map((item, index) => (
           <li key={index}>{item.name}</li>
