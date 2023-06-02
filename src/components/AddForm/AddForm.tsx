@@ -65,6 +65,7 @@ function AddForm ( {updateFunction}: submitData ) {
                     name="price" 
                     id="price" 
                     min={0} 
+                    step={0.01}
                     onChange={(event) => setPrice(Number(event.target.value))} 
                     value={price} className={estilo.cell}
                 />
