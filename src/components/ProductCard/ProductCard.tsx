@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Producto } from "../AddForm/AddForm";
 import estilo from "./ProductCard.module.css";
 
@@ -6,6 +7,16 @@ type productInput = {
 }
 
 function ProductCard (data: productInput) {
+    const [amount, setAmount] = useState(0);
+
+    function substract () {
+        setAmount((amount == 0)? 0: amount - 1);
+    }
+
+    function add () {
+        setAmount(amount + 1)
+    }
+
     return (
         <div className={estilo.card}>
             <h3 className={estilo.title}>{data.product.name}</h3>
@@ -26,9 +37,9 @@ function ProductCard (data: productInput) {
                 </h5>            
             <h4 className={estilo.price}>${data.product.price}</h4>
             <div className={estilo.row}>
-                <button>-</button>
-                <p className={estilo.price}>0</p>
-                <button>+</button>
+                <button onClick={substract}>-</button>
+                <p className={estilo.price}>{amount}</p>
+                <button onClick={add}>+</button>
             </div>
         </div>
     );
