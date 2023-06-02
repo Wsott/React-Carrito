@@ -2,7 +2,7 @@
 
 TODO:
 
-- Dividir verticalmente la app en dos secciones.
+- ~~Dividir verticalmente la app en dos secciones.~~
 - Lado izquierdo -> Formulario:
 - - ~~Titulo "Cargar producto"~~
 - - ~~Input~~
