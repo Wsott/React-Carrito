@@ -48,24 +48,24 @@ function App () {
 
   // console.log(itemList);
 
-  const arroz: Producto = {
-    name: "Bolsa de arroz",
-    description: "",
-    price: 10
-  };
+  // const arroz: Producto = {
+  //   name: "Bolsa de arroz",
+  //   description: "",
+  //   price: 10
+  // };
 
-  const lataTomate: Producto = {
-    name: "Lata de tomate",
-    description: "Una lata de tomate generica",
-    price: 70
-  };
+  // const lataTomate: Producto = {
+  //   name: "Lata de tomate",
+  //   description: "Una lata de tomate generica",
+  //   price: 70
+  // };
 
   return (
     <div className={estilo.container}>
-      <ProductCard product={arroz}></ProductCard>
-      <ProductCard product={lataTomate}></ProductCard>
-      {/* <AddForm updateFunction={addItemToTheList} ></AddForm>
-      <ProductList data={itemList}></ProductList> */}
+      {/* <ProductCard product={arroz}></ProductCard>
+      <ProductCard product={lataTomate}></ProductCard> */}
+      <AddForm updateFunction={addItemToTheList} ></AddForm>
+      <ProductList data={itemList}></ProductList>
       {/* <ul>
           {itemList.map((item, index) => (
             <li key={index}>{item.name} - {item.description} - {item.price}</li>

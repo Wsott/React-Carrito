@@ -49,6 +49,7 @@ textarea {
     height: 100%;
     padding: 1em;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .form {
@@ -64,4 +65,8 @@ input,
 textarea {
     box-sizing: border-box;
     width: 100%;
+}
+
+h1 {
+    text-align: center;
 }
