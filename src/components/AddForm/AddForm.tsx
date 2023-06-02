@@ -48,11 +48,11 @@ function AddForm ( {updateFunction}: submitData ) {
                 </div>
 
                 <div className={estilo.cell}>
-                    <label htmlFor="description" className={estilo.cell}>Descripcion del producto (Opcional)</label>
-                    <textarea 
+                    <label htmlFor="description" className={estilo.cell}>Descripcion (Opcional)</label>
+                    <input 
+                    type='text'
                     name="description" 
                     id="description" 
-                    rows={5}
                     onChange={(event) => setDescription(event.target.value)} 
                     value={description} className={estilo.cell}
                     />

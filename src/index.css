@@ -87,9 +87,9 @@ button:focus-visible {
   background-color: var(--color-fondo);
 }
 
-div {
+/* div {
   background-color: var(--color-primario);
-}
+} */
 
 label {
   font-size: 1.12em;

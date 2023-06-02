@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import AddForm, { Producto } from './components/AddForm/AddForm';
+import ItemList from './components/ProductList/ProductList';
+import ProductList from './components/ProductList/ProductList';
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -47,11 +49,12 @@ function App () {
   return (
     <>
     <AddForm updateFunction={addItemToTheList} ></AddForm>
-    <ul>
+    <ProductList data={itemList}></ProductList>
+    {/* <ul>
         {itemList.map((item, index) => (
           <li key={index}>{item.name} - {item.description} - {item.price}</li>
         ))}
-      </ul>
+      </ul> */}
     </>
   );
 }
