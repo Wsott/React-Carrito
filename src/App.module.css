@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,22 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+
+
+@media screen and (max-width: 950px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .container {
+      display: grid;
+      grid-template-columns: 3fr 7fr;
+      grid-gap: 1em;
+      margin: 1em;
+    }
 }

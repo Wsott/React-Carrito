@@ -1,5 +1,7 @@
 .container {
     width: 100%;
-    box-sizing: border-box;
-    background-color: red;
+    height: 50vh;
+    /* box-sizing: border-box; */
+    /* background-color: red; */
 }
+
