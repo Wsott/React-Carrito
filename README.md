@@ -15,13 +15,13 @@ TODO:
 - - - ~~Deshabilitado en caso de que no haya ingresado nombre y/o precio~~
 - Lado derecho -> Listado:
 - - Imagen de carrito (Arriba a la derecha) con precio total
-- - Mostrar producto (Formato tarjeta)
-- - Tarjeta:
-- - - Nombre
-- - - Descripcion
-- - - Precio
-- - - Fila:
-- - - - Boton izquierda (Signo "+")
-- - - - Cantidad actual
-- - - - Boton derecha(Signo "-")
-- - Filas de 4 elementos
+- - ~~Mostrar producto (Formato tarjeta)~~
+- - ~~Tarjeta:~~
+- - - ~~Nombre~~
+- - - ~~Descripcion~~
+- - - ~~Precio~~
+- - - ~~Fila:~~
+- - - - ~~Boton izquierda (Signo "+")~~
+- - - - ~~Cantidad actual~~
+- - - - ~~Boton derecha(Signo "-")~~
+- - ~~Filas de 4 elementos~~
