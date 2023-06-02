@@ -6,6 +6,7 @@ import AddForm, { Producto } from './components/AddForm/AddForm';
 import ItemList from './components/ProductList/ProductList';
 import ProductList from './components/ProductList/ProductList';
 import estilo from './App.module.css';
+import ProductCard from './components/ProductCard/ProductCard';
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -47,8 +48,22 @@ function App () {
 
   // console.log(itemList);
 
+  const arroz: Producto = {
+    name: "Bolsa de arroz",
+    description: "",
+    price: 10
+  };
+
+  const lataTomate: Producto = {
+    name: "Lata de tomate",
+    description: "Una lata de tomate generica",
+    price: 70
+  };
+
   return (
     <div className={estilo.container}>
+      <ProductCard product={arroz}></ProductCard>
+      <ProductCard product={lataTomate}></ProductCard>
       {/* <AddForm updateFunction={addItemToTheList} ></AddForm>
       <ProductList data={itemList}></ProductList> */}
       {/* <ul>
