@@ -1,9 +1,11 @@
 .container {
-    max-width: 90px;
+    min-width: min-content;
     display: flex;
     background-color: var(--color-secundario);
     padding: 1rem;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 img {

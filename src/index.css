@@ -69,10 +69,10 @@ button:focus-visible {
 } */
 
 :root {
-  --color-fondo: #2C3333;
-  --color-primario: #395B64;
-  --color-secundario: #A5C9CA;
-  --color-terciario: #E7F6F2;
+  --color-fondo: #87805E;
+  --color-primario: #B09B71;
+  --color-secundario: #D8CCA3;
+  --color-terciario: #EDDFB3;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -113,4 +113,5 @@ button {
   font-size: 1.12em;
   font-weight: 500;
   font-family: inherit;
+  cursor: pointer;
 }

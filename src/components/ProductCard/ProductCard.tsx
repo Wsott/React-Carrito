@@ -41,7 +41,7 @@ function ProductCard ({product, updateFinalPrice}: updateData) {//(data: product
                     ? 
                     product.description 
                     : 
-                    "No posee descripcion"
+                    "Este producto no posee descripcion"
                 }
                 </h5>            
             <h4 className={estilo.price}>${product.price}</h4>

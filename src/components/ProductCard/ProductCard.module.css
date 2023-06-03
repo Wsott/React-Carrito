@@ -3,6 +3,8 @@
     width: 200px;
     height: 300px;
     border-radius: 10px;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
 .title {
@@ -11,6 +13,8 @@
 
 .description {
     text-align: justify;
+    min-height: 50px;
+    max-height: 50px;
 }
 
 .price {

@@ -17,8 +17,10 @@ function ProductList (input: listInput) {
 
     return (
         <div className={estilo.container}>
-            <h1>Lista de productos</h1>
-            <ShoppingCart amount={finalPrice}></ShoppingCart>
+            <div className={estilo.row}>
+                <h1>Lista de productos</h1>
+                <ShoppingCart amount={finalPrice}></ShoppingCart>
+            </div>
             <div className={estilo.grilla}>
                 {
                     input.data.map((current) => (

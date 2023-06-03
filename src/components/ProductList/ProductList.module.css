@@ -16,6 +16,16 @@
     grid-gap: 10px;
 }
 
+.row {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    /* background-color: brown; */
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
 /* Firefox */
 * {
     scrollbar-width: thin;
