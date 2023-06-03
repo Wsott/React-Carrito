@@ -12,7 +12,7 @@ function ProductList (input: listInput) {
     const [finalPrice, setFinalPrice] = useState(0);
 
     function updateFinalPrice (amount: number) {
-        setFinalPrice(finalPrice + amount);
+        setFinalPrice(Number((finalPrice + amount).toFixed(2)));
     }
 
     return (
