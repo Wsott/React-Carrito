@@ -21,16 +21,28 @@ function ProductList (input: listInput) {
         <div className={estilo.container}>
             <div className={estilo.row}>
                 <h1>Lista de productos</h1>
-                <ShoppingCart amount={finalPrice}></ShoppingCart>
+                {
+                    (input.displayMode)
+                    ?
+                    null
+                    :
+                    <ShoppingCart amount={finalPrice}></ShoppingCart>
+                }
             </div>
             <div className={estilo.grilla}>
                 {
                     (input.displayMode)
                     ?
                     // Version mobile
-                    input.data.map((current) => (
-                        <ProductRow product={current} updateFinalPrice={updateFinalPrice}></ProductRow>
-                    ))
+                    <>
+                        <div className={estilo.rowSection}>
+                            {
+                            input.data.map((current) => (
+                                <ProductRow product={current} updateFinalPrice={updateFinalPrice}></ProductRow>
+                            ))
+                            }
+                        </div>
+                    </>
                     :
                     // Version desktop
                     input.data.map((current) => (
@@ -38,6 +50,13 @@ function ProductList (input: listInput) {
                     ))
                 }
             </div>
+            {
+                (input.displayMode)
+                ?
+                <ShoppingCart amount={finalPrice}></ShoppingCart>
+                :
+                null
+            }
             {/* <ul>
                 {input.data.map((current) => (
                     <li>
