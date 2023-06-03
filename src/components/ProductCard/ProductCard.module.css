@@ -12,9 +12,11 @@
 }
 
 .description {
-    text-align: justify;
+    text-align: center;
     min-height: 50px;
     max-height: 50px;
+    overflow: auto;
+    font-size: 1em;
 }
 
 .price {
