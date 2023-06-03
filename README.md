@@ -5,7 +5,7 @@ TODO:
 - ~~Existe dos errores con decimales en el shopping cart:~~
 - - ~~El numero de decimales debe ser maximo 2.~~
 - - ~~Es posible obtener un numero negativo cuando se eliminan productos del carrito, evitar eso.~~
-- Falta la version mobile
+- ~~Falta la version mobile~~
 
 - ~~Dividir verticalmente la app en dos secciones.~~
 - ~~Lado izquierdo -> Formulario:~~
