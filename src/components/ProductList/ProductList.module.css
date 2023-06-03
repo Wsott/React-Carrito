@@ -25,3 +25,15 @@
     align-items: center;
     padding: 1rem;
 }
+
+h1 {
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 950px) {
+    .grilla {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}

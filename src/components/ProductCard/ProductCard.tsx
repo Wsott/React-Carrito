@@ -6,7 +6,7 @@ type productInput = {
     product: Producto;
 }
 
-interface updateData {
+export interface updateData {
     product: Producto;
     updateFinalPrice: (amount: number) => void;
 }

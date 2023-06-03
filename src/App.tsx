@@ -120,11 +120,11 @@ function App () {
           ?
           <AddForm updateFunction={addItemToTheList}></AddForm>
           :
-          <ProductList data={itemList}></ProductList>
+          <ProductList data={itemList} displayMode={isMobile}></ProductList>
         :
         <>
           <AddForm updateFunction={addItemToTheList}></AddForm>
-          <ProductList data={itemList}></ProductList>
+          <ProductList data={itemList} displayMode={isMobile}></ProductList>
         </>
       }
       
