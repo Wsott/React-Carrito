@@ -54,7 +54,7 @@ function App () {
   useEffect(() => {
     // Función que verifica si el dispositivo es móvil
     const checkIsMobile = () => {
-      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      const isMobile = window.matchMedia('(max-width: 950px)').matches;
       setIsMobile(isMobile);
     };
 
