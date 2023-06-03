@@ -48,6 +48,12 @@
     width: 100%;
     box-sizing: border-box;
   }
+
+  .buttonRow {
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 950px) {

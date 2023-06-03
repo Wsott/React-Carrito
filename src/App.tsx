@@ -99,11 +99,15 @@ function App () {
       {
         (isMobile)
         ?
-          (showForm)
-          ?
-          <button onClick={changeComponent}>Mostrar listado</button>
-          :
-          <button onClick={changeComponent}>Mostrar formulario</button>
+          <div className={estilo.buttonRow}>
+            {
+              (showForm)
+              ?
+              <button onClick={changeComponent}>Mostrar listado</button>
+              :
+              <button onClick={changeComponent}>Mostrar formulario</button>
+            }
+          </div>
         :
         null
       }
