@@ -1,0 +1,16 @@
+.container {
+    max-width: 90px;
+    display: flex;
+    background-color: var(--color-secundario);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}
+
+span {
+    margin-left: 1rem;
+}

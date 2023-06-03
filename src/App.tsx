@@ -64,7 +64,7 @@ function App () {
     <div className={estilo.container}>
       {/* <ProductCard product={arroz}></ProductCard>
       <ProductCard product={lataTomate}></ProductCard> */}
-      <AddForm updateFunction={addItemToTheList} ></AddForm>
+      <AddForm updateFunction={addItemToTheList}></AddForm>
       <ProductList data={itemList}></ProductList>
       {/* <ul>
           {itemList.map((item, index) => (

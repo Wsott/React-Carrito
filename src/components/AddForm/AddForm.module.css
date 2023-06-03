@@ -50,6 +50,9 @@ textarea {
     padding: 1em;
     box-sizing: border-box;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form {

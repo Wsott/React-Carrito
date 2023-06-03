@@ -34,8 +34,8 @@ function AddForm ( {updateFunction}: submitData ) {
 
     return (
         <div className={estilo.container}>
-            <h1>Cargar producto</h1>
             <form onSubmit={handleForm} className={estilo.form}>
+                <h1>Cargar producto</h1>
                 <div className={estilo.cell}>
                     <label htmlFor="name" className={estilo.cell}>Nombre del producto</label>
                     <input 
