@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
@@ -40,6 +40,40 @@ import ProductCard from './components/ProductCard/ProductCard';
 function App () {
   // const items: Array<Item> = [];
   const [itemList, setItemList] = useState<Producto[]>([])
+  const [isMobile, setIsMobile] = useState(false);
+  const [showForm, setShowForm] = useState(true);
+
+  // function checkIsMobile () {
+  //   setIsMobile (window.matchMedia("(max-width: 450px)").matches);
+  // }
+
+  // checkIsMobile();
+  // window.addEventListener("resize", checkIsMobile);
+
+
+  useEffect(() => {
+    // Función que verifica si el dispositivo es móvil
+    const checkIsMobile = () => {
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      setIsMobile(isMobile);
+    };
+
+    // Verificar el estado inicial del dispositivo
+    checkIsMobile();
+
+    // Agregar un listener para actualizar el estado cuando se cambie el tamaño de la ventana
+    window.addEventListener('resize', checkIsMobile);
+
+    // Limpiar el listener cuando el componente se desmonte
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
+
+  const changeComponent = () => {
+    setShowForm(!showForm);
+  }
+
   
   const addItemToTheList = (item: Producto) => {
     setItemList([...itemList, item]);
@@ -62,10 +96,34 @@ function App () {
 
   return (
     <div className={estilo.container}>
+      {
+        (isMobile)
+        ?
+          (showForm)
+          ?
+          <button onClick={changeComponent}>Mostrar listado</button>
+          :
+          <button onClick={changeComponent}>Mostrar formulario</button>
+        :
+        null
+      }
       {/* <ProductCard product={arroz}></ProductCard>
       <ProductCard product={lataTomate}></ProductCard> */}
-      <AddForm updateFunction={addItemToTheList}></AddForm>
-      <ProductList data={itemList}></ProductList>
+      {
+        (isMobile)
+        ?
+          (showForm)
+          ?
+          <AddForm updateFunction={addItemToTheList}></AddForm>
+          :
+          <ProductList data={itemList}></ProductList>
+        :
+        <>
+          <AddForm updateFunction={addItemToTheList}></AddForm>
+          <ProductList data={itemList}></ProductList>
+        </>
+      }
+      
       {/* <ul>
           {itemList.map((item, index) => (
             <li key={index}>{item.name} - {item.description} - {item.price}</li>
