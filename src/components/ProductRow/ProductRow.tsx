@@ -3,7 +3,7 @@ import { updateData } from "../ProductCard/ProductCard";
 import estilo from "./ProductRow.module.css";
 
 
-function ProductRow ({product, updateFinalPrice}: updateData) {//(data: productInput, {updateFinalPrice}: updateData) {
+function ProductRow ({product, updateFinalPrice}: updateData) {
     const [amount, setAmount] = useState(0);
 
     function substract () {

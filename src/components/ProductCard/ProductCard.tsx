@@ -2,16 +2,12 @@ import { useState } from 'react';
 import { Producto } from "../AddForm/AddForm";
 import estilo from "./ProductCard.module.css";
 
-type productInput = {
-    product: Producto;
-}
-
 export interface updateData {
     product: Producto;
     updateFinalPrice: (amount: number) => void;
 }
 
-function ProductCard ({product, updateFinalPrice}: updateData) {//(data: productInput, {updateFinalPrice}: updateData) {
+function ProductCard ({product, updateFinalPrice}: updateData) {
     const [amount, setAmount] = useState(0);
 
     function substract () {
@@ -29,12 +25,6 @@ function ProductCard ({product, updateFinalPrice}: updateData) {//(data: product
     return (
         <div className={estilo.card}>
             <h3 className={estilo.title}>{product.name}</h3>
-            {/* {
-            (data.description.length != 0)?
-            <h5>{data.description}</h5>
-            :
-            <div>No posee descripcion</div>
-            } */}
             <h5 className={estilo.description}>
                 {
                     (product.description.length != 0)

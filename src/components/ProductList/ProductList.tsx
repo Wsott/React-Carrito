@@ -57,13 +57,6 @@ function ProductList (input: listInput) {
                 :
                 null
             }
-            {/* <ul>
-                {input.data.map((current) => (
-                    <li>
-                        <ProductCard product={current}></ProductCard>
-                    </li>
-                ))}
-            </ul> */}
         </div>
     );
 }
