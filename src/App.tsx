@@ -6,7 +6,7 @@ import estilo from './App.module.css';
 function App () {
   const [itemList, setItemList] = useState<Producto[]>([])
   const [isMobile, setIsMobile] = useState(false);
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(true); 
 
   useEffect(() => {
     // Función que verifica si el dispositivo es móvil
