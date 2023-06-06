@@ -5,12 +5,13 @@ import estilo from "./ProductList.module.css";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import ProductRow from "../ProductRow/ProductRow";
 
-type listInput = {
+interface listInput {
     data: Array<Producto>;
     displayMode: boolean;
+    removeElement: (target: Producto) => void;
 }
 
-function ProductList (input: listInput) {
+function ProductList ({data, displayMode, removeElement}: listInput) {
     const [finalPrice, setFinalPrice] = useState(0);
 
     function updateFinalPrice (amount: number) {
@@ -22,7 +23,7 @@ function ProductList (input: listInput) {
             <div className={estilo.row}>
                 <h1>Lista de productos</h1>
                 {
-                    (input.displayMode)
+                    (displayMode)
                     ?
                     null
                     :
@@ -31,27 +32,27 @@ function ProductList (input: listInput) {
             </div>
             <div className={estilo.grilla}>
                 {
-                    (input.displayMode)
+                    (displayMode)
                     ?
                     // Version mobile
                     <>
                         <div className={estilo.rowSection}>
                             {
-                            input.data.map((current) => (
-                                <ProductRow product={current} updateFinalPrice={updateFinalPrice}></ProductRow>
+                            data.map((current) => (
+                                <ProductRow product={current} updateFinalPrice={updateFinalPrice} removeElement={removeElement}></ProductRow>
                             ))
                             }
                         </div>
                     </>
                     :
                     // Version desktop
-                    input.data.map((current) => (
-                        <ProductCard product={current} updateFinalPrice={updateFinalPrice}></ProductCard>
+                    data.map((current) => (
+                        <ProductCard product={current} updateFinalPrice={updateFinalPrice} removeElement={removeElement}></ProductCard>
                     ))
                 }
             </div>
             {
-                (input.displayMode)
+                (displayMode)
                 ?
                 <ShoppingCart amount={finalPrice}></ShoppingCart>
                 :

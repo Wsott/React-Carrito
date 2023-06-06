@@ -36,6 +36,16 @@ function App () {
     setItemList([...itemList, item]);
   };
 
+  const RemoveItemFromTheList = (item: Producto) => {
+    setItemList(
+      itemList.filter(
+        (actual) => {
+          return actual.id != item.id;
+        }
+      )
+    )
+  };
+
   return (
     <div className={estilo.container}>
       {
@@ -60,11 +70,11 @@ function App () {
           ?
           <AddForm updateFunction={addItemToTheList}></AddForm>
           :
-          <ProductList data={itemList} displayMode={isMobile}></ProductList>
+          <ProductList data={itemList} displayMode={isMobile} removeElement={RemoveItemFromTheList}></ProductList>
         :
         <>
           <AddForm updateFunction={addItemToTheList}></AddForm>
-          <ProductList data={itemList} displayMode={isMobile}></ProductList>
+          <ProductList data={itemList} displayMode={isMobile} removeElement={RemoveItemFromTheList}></ProductList>
         </>
       }
     </div>

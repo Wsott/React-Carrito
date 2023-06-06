@@ -5,6 +5,7 @@ import estilo from './AddForm.module.css';
 Tipo de dato que representa el producto
 */
 export type Producto = {
+    id: string;
     name: string;
     description: string;
     price: number;
@@ -25,7 +26,11 @@ function AddForm ( {updateFunction}: submitData ) {
     */
     const handleForm = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const newItem: Producto = {name: name, description: description, price: price};
+        const newItem: Producto = {
+            id: Date.now().toString(),
+            name: name, 
+            description: description, 
+            price: price};
         updateFunction(newItem);
         setName('');
         setDescription('');

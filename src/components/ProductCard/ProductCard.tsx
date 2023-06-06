@@ -5,13 +5,15 @@ import estilo from "./ProductCard.module.css";
 export interface updateData {
     product: Producto;
     updateFinalPrice: (amount: number) => void;
+    removeElement: (target: Producto) => void;
 }
 
-function ProductCard ({product, updateFinalPrice}: updateData) {
-    const [amount, setAmount] = useState(0);
+function ProductCard ({product, updateFinalPrice, removeElement}: updateData) {
+    const [amount, setAmount] = useState(1);
+
 
     function substract () {
-        if (amount != 0) {
+        if (amount != 1) {
             setAmount(amount - 1);
             updateFinalPrice(-product.price);
         }        
@@ -25,6 +27,7 @@ function ProductCard ({product, updateFinalPrice}: updateData) {
     return (
         <div className={estilo.card}>
             <h3 className={estilo.title}>{product.name}</h3>
+            <button onClick={() => removeElement(product)}>X</button>
             <h5 className={estilo.description}>
                 {
                     (product.description.length != 0)
