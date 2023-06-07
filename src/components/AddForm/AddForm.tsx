@@ -9,6 +9,7 @@ export type Producto = {
     name: string;
     description: string;
     price: number;
+    amount: number;
 }
 
 interface submitData {
@@ -30,7 +31,9 @@ function AddForm ( {updateFunction}: submitData ) {
             id: Date.now().toString(),
             name: name, 
             description: description, 
-            price: price};
+            price: price,
+            amount: 0
+        };
         updateFunction(newItem);
         setName('');
         setDescription('');

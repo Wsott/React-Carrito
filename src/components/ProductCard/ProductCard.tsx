@@ -9,25 +9,32 @@ export interface updateData {
 }
 
 function ProductCard ({product, updateFinalPrice, removeElement}: updateData) {
-    const [amount, setAmount] = useState(1);
+    //const [amount, setAmount] = useState(0);
 
 
     function substract () {
-        if (amount != 1) {
-            setAmount(amount - 1);
+        if (/*amount != 0*/product.amount != 0) {
+            //setAmount(amount - 0);
+            product.amount--;
             updateFinalPrice(-product.price);
         }        
     }
 
     function add () {
-        setAmount(amount + 1)
+        product.amount++;
+        //setAmount(amount + 1)
         updateFinalPrice(product.price)
+    }
+
+    function handleRemove () {
+        updateFinalPrice(-(product.amount * product.price)); 
+        removeElement(product);
     }
 
     return (
         <div className={estilo.card}>
             <h3 className={estilo.title}>{product.name}</h3>
-            <button onClick={() => removeElement(product)}>X</button>
+            <button onClick={/*() => removeElement(product) */ handleRemove}>X</button>
             <h5 className={estilo.description}>
                 {
                     (product.description.length != 0)
@@ -40,7 +47,7 @@ function ProductCard ({product, updateFinalPrice, removeElement}: updateData) {
             <h4 className={estilo.price}>${product.price}</h4>
             <div className={estilo.row}>
                 <button onClick={substract}>-</button>
-                <p className={estilo.price}>{amount}</p>
+                <p className={estilo.price}>{product.amount}</p>
                 <button onClick={add}>+</button>
             </div>
         </div>
