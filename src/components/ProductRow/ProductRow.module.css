@@ -42,3 +42,10 @@ button {
     max-width: fit-content;
     max-height: fit-content;
 }
+
+.botonEliminar {
+    font-size: small;
+    height: min-content;
+    min-width: 100%;
+    grid-column: 1 / span 2;
+}

@@ -33,8 +33,10 @@ function ProductCard ({product, updateFinalPrice, removeElement}: updateData) {
 
     return (
         <div className={estilo.card}>
+            <button className={estilo.botonEliminar} onClick={/*() => removeElement(product) */ handleRemove}>
+                Quitar producto <i className={"fa fa-trash"}></i>
+            </button>
             <h3 className={estilo.title}>{product.name}</h3>
-            <button onClick={/*() => removeElement(product) */ handleRemove}>X</button>
             <h5 className={estilo.description}>
                 {
                     (product.description.length != 0)
