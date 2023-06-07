@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Producto } from "../AddForm/AddForm";
 import estilo from "./ProductCard.module.css";
 
@@ -9,12 +8,8 @@ export interface updateData {
 }
 
 function ProductCard ({product, updateFinalPrice, removeElement}: updateData) {
-    //const [amount, setAmount] = useState(0);
-
-
     function substract () {
-        if (/*amount != 0*/product.amount != 0) {
-            //setAmount(amount - 0);
+        if (product.amount != 0) {
             product.amount--;
             updateFinalPrice(-product.price);
         }        
@@ -22,7 +17,6 @@ function ProductCard ({product, updateFinalPrice, removeElement}: updateData) {
 
     function add () {
         product.amount++;
-        //setAmount(amount + 1)
         updateFinalPrice(product.price)
     }
 
@@ -33,7 +27,7 @@ function ProductCard ({product, updateFinalPrice, removeElement}: updateData) {
 
     return (
         <div className={estilo.card}>
-            <button className={estilo.botonEliminar} onClick={/*() => removeElement(product) */ handleRemove}>
+            <button className={estilo.botonEliminar} onClick={handleRemove}>
                 Quitar producto <i className={"fa fa-trash"}></i>
             </button>
             <h3 className={estilo.title}>{product.name}</h3>
